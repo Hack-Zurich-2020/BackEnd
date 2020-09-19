@@ -16,8 +16,6 @@ public class FoodInquiryResponse {
     //User's health parameters for debugging
     @JsonProperty("HP")
     private List<Integer> healthParams;
-    @JsonProperty("F")
-    private List<Food> foods;
     @JsonProperty("FRM")
-    private Map<Long, Restaurant> foodRestaurantMap;
+    private Map<Food, Restaurant> foodRestaurantMap;
 }
