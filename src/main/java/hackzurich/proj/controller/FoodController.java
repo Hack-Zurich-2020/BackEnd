@@ -6,21 +6,21 @@ import hackzurich.proj.model.dto.response.FoodInquiryResponse;
 import hackzurich.proj.model.dto.response.FoodOrderResponse;
 import hackzurich.proj.service.FoodService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @PropertySource("classpath:application.properties")
 @AllArgsConstructor
+@Slf4j
 public class FoodController {
     private FoodService foodService;
 
     @PostMapping("/food/inquire")
     public FoodInquiryResponse foodInquiry(@RequestBody FoodInquiryRequest request){
+        log.info("Food Inquiry");
         return foodService.foodInquiry(request);
     }
 
@@ -29,7 +29,7 @@ public class FoodController {
         return foodService.foodOrder(request);
     }
 
-    @PostMapping("/food/finalize")
+    @GetMapping("/food/finalize")
     public void finalizeOrder(@RequestParam(name = "orderId") String orderId){
         foodService.finalizeOrder(orderId);
     }
