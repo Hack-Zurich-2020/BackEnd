@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @PropertySource("classpath:application.properties")
 @AllArgsConstructor
 @Slf4j
+@CrossOrigin
 public class FoodController {
     private FoodService foodService;
 
