@@ -13,6 +13,8 @@ import java.util.List;
 public class FoodInquiryRequest {
     @JsonProperty("UI")
     private String userId;
+    @JsonProperty("FT")
+    private Integer foodType;
     @JsonProperty("LO")
     private Double longitude;
     @JsonProperty("LA")
