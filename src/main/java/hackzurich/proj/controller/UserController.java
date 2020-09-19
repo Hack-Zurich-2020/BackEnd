@@ -1,6 +1,7 @@
 package hackzurich.proj.controller;
 
 import hackzurich.proj.model.dto.request.CreateUserRequest;
+import hackzurich.proj.model.dto.request.UpdateUserHealthParamsRequest;
 import hackzurich.proj.model.dto.response.GetHealthParamsResponse;
 import hackzurich.proj.service.UserService;
 import lombok.AllArgsConstructor;
@@ -22,5 +23,7 @@ public class UserController {
     }
 
     @PostMapping("/user/update_health_params")
-    public GetHealthParamsResponse updateHealthParams(@RequestBody)
+    public GetHealthParamsResponse updateHealthParams(@RequestBody UpdateUserHealthParamsRequest request){
+        return userService.updateUserHealthParams(request.getId(), request.getHealthParams());
+    }
 }
