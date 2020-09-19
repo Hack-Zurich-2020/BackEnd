@@ -23,7 +23,7 @@ public class FoodEntity {
     private int type;
 
     @ManyToOne
-    @JoinColumn(name = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "restaurant_id", referencedColumnName = "id", insertable = false, updatable = false)
     private RestaurantEntity restaurantEntity;
 
 
