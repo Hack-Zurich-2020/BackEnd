@@ -15,7 +15,7 @@ import java.util.Map;
 public class FoodInquiryResponse {
     //User's health parameters for debugging
     @JsonProperty("HP")
-    private List<Integer> healthParams;
+    private Map<Integer, Integer> healthParams;
     @JsonProperty("F")
     private List<Food> foods;
     @JsonProperty("FRM")
