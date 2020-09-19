@@ -9,11 +9,17 @@ import hackzurich.proj.model.dto.request.FoodOrderRequest;
 import hackzurich.proj.model.dto.response.FoodInquiryResponse;
 import hackzurich.proj.model.dto.response.FoodOrderResponse;
 import hackzurich.proj.model.entity.FoodEntity;
+import hackzurich.proj.model.entity.OrderEntity;
 import hackzurich.proj.model.entity.RestaurantEntity;
 import hackzurich.proj.model.entity.UserEntity;
+import hackzurich.proj.model.exception.FoodNotFoundException;
+import hackzurich.proj.model.exception.OrderNotFoundException;
 import hackzurich.proj.model.exception.UserNotFoundException;
 import hackzurich.proj.model.repository.FoodRepository;
+import hackzurich.proj.model.repository.OrderRepository;
 import hackzurich.proj.model.repository.UserRepository;
+import hackzurich.proj.util.CodingUtil;
+import hackzurich.proj.util.GenIdUtil;
 import hackzurich.proj.util.LocationUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -27,6 +33,7 @@ public class FoodService {
     private UserRepository userRepository;
     private MainConfig mainConfig;
     private PythonService pythonService;
+    private OrderRepository orderRepository;
 
     public FoodInquiryResponse foodInquiry(FoodInquiryRequest request) {
         Optional<UserEntity> optionalUserEntity = userRepository.findById(request.getUserId());
@@ -44,32 +51,43 @@ public class FoodService {
             if (distance <= mainConfig.getMaxDistanceKm()) {
                 Restaurant restaurant = new Restaurant(restaurantEntity.getName(), distance,
                         getListCategoryIds(restaurantEntity.getCategoryIds()));
-                Food food = new Food(foodEntity.getId(), foodEntity.getPrice(),
+                Food food = new Food(foodEntity.getName(), foodEntity.getId(), foodEntity.getPrice(),
                         getMapNutritionFactsFromStr(foodEntity.getNutritionFacts()),
                         getListCategoryIds(categoryIdsStr), foodEntity.getAmount(),
-                        getMapIngredientsFromStr(foodEntity.getIngredients()), foodEntity.getType());
+                        getMapIntegerKeyFromStr(foodEntity.getIngredients()), foodEntity.getType());
                 foods.add(food);
                 foodRestaurantMap.put(food.getId(), restaurant);
             }
         });
-        return new FoodInquiryResponse(getListCategoryIds(userEntity.getHealthParams()), foods, foodRestaurantMap);
+        return new FoodInquiryResponse(getMapNutritionFactsFromStr(userEntity.getHealthParams()), foods, foodRestaurantMap);
     }
 
-/*
-    public FoodOrderResponse foodOrder(FoodOrderRequest request){
+    public FoodOrderResponse foodOrder(FoodOrderRequest request) {
+        Optional<UserEntity> userEntityOptional = userRepository.findById(request.getUserId());
+        if (userEntityOptional.isEmpty())
+            throw new UserNotFoundException();
+        UserEntity userEntity = userEntityOptional.get();
         Map<String, Integer> orderMap = new HashMap<>();
         request.getFoodIds().forEach(foodId -> {
             Optional<FoodEntity> foodEntityOptional = foodRepository.findById(foodId);
-            if
-            FoodEntity foodEntity =
+            if (foodEntityOptional.isEmpty())
+                throw new FoodNotFoundException();
+            FoodEntity foodEntity = foodEntityOptional.get();
+            orderMap.put(foodEntity.getName(), foodEntity.getAmount());
         });
+        String orderId = GenIdUtil.genId(Constants.ORDER_ID_LEN);
+        OrderEntity orderEntity = new OrderEntity(orderId, Constants.NO_VALUE, Constants.NO_VALUE,
+                CodingUtil.strMapToStr(orderMap), false, userEntity);
+        orderRepository.save(orderEntity);
+        return new FoodOrderResponse(mainConfig.getEstimatedTime(), orderId, orderMap);
     }
-*/
 
-    private String getStrCategoryIds(List<Integer> ids) {
-        StringBuilder categoryIds = new StringBuilder();
-        ids.forEach(id -> categoryIds.append(id).append(","));
-        return categoryIds.substring(0, categoryIds.length() - 1);
+    public void finalizeOrder(String orderId){
+        Optional<OrderEntity> orderEntityOptional = orderRepository.findById(orderId);
+        if (orderEntityOptional.isEmpty())
+            throw new OrderNotFoundException();
+        OrderEntity orderEntity = orderEntityOptional.get();
+        orderEntity.setFinalized(true);
     }
 
     private List<Integer> getListCategoryIds(String categoryIdsStr) {
@@ -78,7 +96,7 @@ public class FoodService {
         return returnedCategoryIds;
     }
 
-    private Map<String, Integer> getMapIngredientsFromStr(String factsStr) {
+    private Map<String, Integer> getMapIntegerKeyFromStr(String factsStr) {
         Map<String, Integer> nutritionFactsMap = new HashMap<>();
         for (String each : factsStr.split(Constants.COMMA)) {
             nutritionFactsMap.put(each.split(Constants.COLON)[0], Integer.parseInt(each.split(Constants.COLON)[1]));

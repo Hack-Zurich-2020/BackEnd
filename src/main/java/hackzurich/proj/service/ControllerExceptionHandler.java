@@ -1,5 +1,8 @@
 package hackzurich.proj.service;
 
+import hackzurich.proj.model.exception.FoodNotFoundException;
+import hackzurich.proj.model.exception.OrderNotFoundException;
+import hackzurich.proj.model.exception.UserExistingException;
 import hackzurich.proj.model.exception.UserNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -16,8 +19,20 @@ public class ControllerExceptionHandler {
         //No scenarios for handling this exception. Only returning http response
     }
 
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler({OrderNotFoundException.class})
+    public void handleOrderNotFound() {
+        //No scenarios for handling this exception. Only returning http response
+    }
+
+    @ResponseStatus(HttpStatus.NOT_ACCEPTABLE)
+    @ExceptionHandler({FoodNotFoundException.class})
+    public void handleFoodNotFound() {
+        //No scenarios for handling this exception. Only returning http response
+    }
+
     @ResponseStatus(HttpStatus.FOUND)
-    @ExceptionHandler({UserNotFoundException.class})
+    @ExceptionHandler({UserExistingException.class})
     public void handleExistingUser() {
         //No scenarios for handling this exception. Only returning http response
     }

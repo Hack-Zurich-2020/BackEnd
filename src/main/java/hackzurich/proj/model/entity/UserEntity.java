@@ -1,21 +1,25 @@
 package hackzurich.proj.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
-@AllArgsConstructor
+@RequiredArgsConstructor
+@NoArgsConstructor
 @Data
 public class UserEntity {
+    @NonNull
     @Id
     private String id;
 
+    @NonNull
     private String healthParams;
+    @NonNull
     private int balance;
+
+    @OneToMany(targetEntity = OrderEntity.class, mappedBy = "userEntity", fetch = FetchType.LAZY)
+    private List<OrderEntity> orderEntities;
 }

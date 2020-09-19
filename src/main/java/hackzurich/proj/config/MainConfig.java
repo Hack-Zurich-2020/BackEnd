@@ -10,4 +10,6 @@ import org.springframework.context.annotation.Configuration;
 public class MainConfig {
     @Value("${max-distance-km}")
     private int maxDistanceKm;
+    @Value("${estimated-time}")
+    private int estimatedTime;
 }

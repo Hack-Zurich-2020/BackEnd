@@ -1,5 +1,6 @@
 package hackzurich.proj.controller;
 
+import hackzurich.proj.util.GenIdUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,6 +14,6 @@ public class ControllerTest {
 
     @Test
     public void foodInquiryTest(){
-
+        System.out.println(GenIdUtil.genId(10));
     }
 }

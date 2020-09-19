@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface FoodRepository extends CrudRepository<FoodEntity, Long> {
-    public List<FoodEntity> findAllByCategoryIdsContains(String categoryIds);
+    List<FoodEntity> findAllByCategoryIdsContains(String categoryIds);
 }

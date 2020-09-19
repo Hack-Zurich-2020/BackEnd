@@ -1,6 +1,5 @@
 package hackzurich.proj.model.entity;
 
-import hackzurich.proj.model.dto.Food;
 import lombok.Getter;
 
 import javax.persistence.*;
