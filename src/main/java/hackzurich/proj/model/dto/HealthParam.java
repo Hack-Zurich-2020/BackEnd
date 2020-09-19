@@ -1,14 +1,12 @@
 package hackzurich.proj.model.dto;
 
 public enum HealthParam {
-    PREGNANT(0),
-    BLOOD_PRESSURE(1),
-    DIABETES(2),
-    BMI(3),
-    AGE(4),
-    LACTOSE_ALLERGY(5),
-    BEEF_ALLERGY(6),
-    HIGH_LDL(7);
+    BLOOD_PRESSURE(0),
+    DIABETES(1),
+    BMI(2),
+    AGE(3),
+    LACTOSE_ALLERGY(4),
+    HIGH_LDL(5);
 
     HealthParam(int id) {
         this.id = id;
