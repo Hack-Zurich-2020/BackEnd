@@ -26,7 +26,7 @@ public class Food {
     private Integer amount;
     //List of ingredients
     @JsonProperty("IN")
-    private List<String> ingredients;
+    private Map<String, Integer> ingredients;
     //FoodType
     @JsonProperty("FT")
     private Integer foodType;

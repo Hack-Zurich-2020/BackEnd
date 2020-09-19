@@ -16,9 +16,11 @@ public class FoodEntity {
 
     private String categoryIds;
     private String nutritionFacts;
+    private String ingredients;
 
     private int amount;
     private int price;
+    private int type;
 
     @ManyToOne
     @JoinColumn(name = "id", insertable = false, updatable = false)
