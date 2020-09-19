@@ -5,7 +5,9 @@ import hackzurich.proj.model.Constants;
 import hackzurich.proj.model.dto.Food;
 import hackzurich.proj.model.dto.Restaurant;
 import hackzurich.proj.model.dto.request.FoodInquiryRequest;
+import hackzurich.proj.model.dto.request.FoodOrderRequest;
 import hackzurich.proj.model.dto.response.FoodInquiryResponse;
+import hackzurich.proj.model.dto.response.FoodOrderResponse;
 import hackzurich.proj.model.entity.FoodEntity;
 import hackzurich.proj.model.entity.RestaurantEntity;
 import hackzurich.proj.model.entity.UserEntity;
@@ -24,16 +26,16 @@ public class FoodService {
     private FoodRepository foodRepository;
     private UserRepository userRepository;
     private MainConfig mainConfig;
+    private PythonService pythonService;
 
     public FoodInquiryResponse foodInquiry(FoodInquiryRequest request) {
         Optional<UserEntity> optionalUserEntity = userRepository.findById(request.getUserId());
-        if (!optionalUserEntity.isPresent())
+        if (optionalUserEntity.isEmpty())
             throw new UserNotFoundException();
         UserEntity userEntity = optionalUserEntity.get();
-        String categoryIdsStr = getStrCategoryIds(request.getCategoryIds());
+        String categoryIdsStr = pythonService.getFoodCategories(userEntity.getHealthParams());
         List<FoodEntity> foodEntities = foodRepository.findAllByCategoryIdsContains(categoryIdsStr);
-        List<Food> foods = new ArrayList<>();
-        Map<Long, Restaurant> foodRestaurantMap = new HashMap<>();
+        Map<Food, Restaurant> foodRestaurantMap = new HashMap<>();
         foodEntities.forEach(foodEntity -> {
             RestaurantEntity restaurantEntity = foodEntity.getRestaurantEntity();
             double distance = LocationUtil.calcDistance(request.getLatitude(), request.getLongitude(),
@@ -41,14 +43,26 @@ public class FoodService {
             if (distance <= mainConfig.getMaxDistanceKm()) {
                 Restaurant restaurant = new Restaurant(restaurantEntity.getName(), distance,
                         getListCategoryIds(restaurantEntity.getCategoryIds()));
-                Food food = new Food(foodEntity.getId(), foodEntity.getPrice(), getMapNutritionFacts(foodEntity.getNutritionFacts()),
-                        getListCategoryIds(categoryIdsStr), foodEntity.getAmount());
-                foods.add(food);
-                foodRestaurantMap.put(food.getId(), restaurant);
+                Food food = new Food(foodEntity.getId(), foodEntity.getPrice(),
+                        getMapNutritionFactsFromStr(foodEntity.getNutritionFacts()),
+                        getListCategoryIds(categoryIdsStr), foodEntity.getAmount(),
+                        getMapIngredientsFromStr(foodEntity.getIngredients()), foodEntity.getType());
+                foodRestaurantMap.put(food, restaurant);
             }
         });
-        return new FoodInquiryResponse(foods, foodRestaurantMap);
+        return new FoodInquiryResponse(getListCategoryIds(userEntity.getHealthParams()), foodRestaurantMap);
     }
+
+/*
+    public FoodOrderResponse foodOrder(FoodOrderRequest request){
+        Map<String, Integer> orderMap = new HashMap<>();
+        request.getFoodIds().forEach(foodId -> {
+            Optional<FoodEntity> foodEntityOptional = foodRepository.findById(foodId);
+            if
+            FoodEntity foodEntity =
+        });
+    }
+*/
 
     private String getStrCategoryIds(List<Integer> ids) {
         StringBuilder categoryIds = new StringBuilder();
@@ -62,10 +76,19 @@ public class FoodService {
         return returnedCategoryIds;
     }
 
-    private Map<Integer, Integer> getMapNutritionFacts(String factsStr) {
+    private Map<String, Integer> getMapIngredientsFromStr(String factsStr) {
+        Map<String, Integer> nutritionFactsMap = new HashMap<>();
+        for (String each : factsStr.split(Constants.COMMA)) {
+            nutritionFactsMap.put(each.split(Constants.COLON)[0], Integer.parseInt(each.split(Constants.COLON)[1]));
+        }
+        return nutritionFactsMap;
+    }
+
+    private Map<Integer, Integer> getMapNutritionFactsFromStr(String factsStr) {
         Map<Integer, Integer> nutritionFactsMap = new HashMap<>();
-        for (String each : factsStr.split(Constants.COMMA))
+        for (String each : factsStr.split(Constants.COMMA)) {
             nutritionFactsMap.put(Integer.parseInt(each.split(Constants.COLON)[0]), Integer.parseInt(each.split(Constants.COLON)[1]));
+        }
         return nutritionFactsMap;
     }
 }

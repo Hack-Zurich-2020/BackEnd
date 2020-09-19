@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -16,8 +17,14 @@ public class PythonService {
 
     @PostConstruct
     public void initPythonScript() {
+/*
         BufferedWriter out = new BufferedWriter(new FileWriter());
         out.write(prg);
         out.close();
+*/
+    }
+
+    public String getFoodCategories(String healthParams){
+        return "1,2";
     }
 }
