@@ -25,6 +25,6 @@ public class PythonService {
     }
 
     public String getFoodCategories(String healthParams){
-        return "1,2";
+        return "2,3";
     }
 }

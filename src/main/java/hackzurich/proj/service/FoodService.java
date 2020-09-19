@@ -35,7 +35,8 @@ public class FoodService {
         UserEntity userEntity = optionalUserEntity.get();
         String categoryIdsStr = pythonService.getFoodCategories(userEntity.getHealthParams());
         List<FoodEntity> foodEntities = foodRepository.findAllByCategoryIdsContains(categoryIdsStr);
-        Map<Food, Restaurant> foodRestaurantMap = new HashMap<>();
+        List<Food> foods = new ArrayList<>();
+        Map<Long, Restaurant> foodRestaurantMap = new HashMap<>();
         foodEntities.forEach(foodEntity -> {
             RestaurantEntity restaurantEntity = foodEntity.getRestaurantEntity();
             double distance = LocationUtil.calcDistance(request.getLatitude(), request.getLongitude(),
@@ -47,10 +48,11 @@ public class FoodService {
                         getMapNutritionFactsFromStr(foodEntity.getNutritionFacts()),
                         getListCategoryIds(categoryIdsStr), foodEntity.getAmount(),
                         getMapIngredientsFromStr(foodEntity.getIngredients()), foodEntity.getType());
-                foodRestaurantMap.put(food, restaurant);
+                foods.add(food);
+                foodRestaurantMap.put(food.getId(), restaurant);
             }
         });
-        return new FoodInquiryResponse(getListCategoryIds(userEntity.getHealthParams()), foodRestaurantMap);
+        return new FoodInquiryResponse(getListCategoryIds(userEntity.getHealthParams()), foods, foodRestaurantMap);
     }
 
 /*
