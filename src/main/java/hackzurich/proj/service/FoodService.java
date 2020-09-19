@@ -50,16 +50,16 @@ public class FoodService {
                     restaurantEntity.getLatitude(), restaurantEntity.getLongitude());
             if (distance <= mainConfig.getMaxDistanceKm()) {
                 Restaurant restaurant = new Restaurant(restaurantEntity.getName(), distance,
-                        getListCategoryIds(restaurantEntity.getCategoryIds()));
+                        CodingUtil.strToIntList(restaurantEntity.getCategoryIds()));
                 Food food = new Food(foodEntity.getName(), foodEntity.getId(), foodEntity.getPrice(),
-                        getMapNutritionFactsFromStr(foodEntity.getNutritionFacts()),
-                        getListCategoryIds(categoryIdsStr), foodEntity.getAmount(),
-                        getMapIntegerKeyFromStr(foodEntity.getIngredients()), foodEntity.getType());
+                        CodingUtil.strToIntKeyMap(foodEntity.getNutritionFacts()),
+                        CodingUtil.strToIntList(categoryIdsStr), foodEntity.getAmount(),
+                        CodingUtil.strToStrKeyMap(foodEntity.getIngredients()), foodEntity.getType());
                 foods.add(food);
                 foodRestaurantMap.put(food.getId(), restaurant);
             }
         });
-        return new FoodInquiryResponse(getMapNutritionFactsFromStr(userEntity.getHealthParams()), foods, foodRestaurantMap);
+        return new FoodInquiryResponse(CodingUtil.strToIntKeyMap(userEntity.getHealthParams()), foods, foodRestaurantMap);
     }
 
     public FoodOrderResponse foodOrder(FoodOrderRequest request) {
@@ -88,27 +88,5 @@ public class FoodService {
             throw new OrderNotFoundException();
         OrderEntity orderEntity = orderEntityOptional.get();
         orderEntity.setFinalized(true);
-    }
-
-    private List<Integer> getListCategoryIds(String categoryIdsStr) {
-        List<Integer> returnedCategoryIds = new ArrayList<>();
-        Arrays.asList(categoryIdsStr.split(",")).forEach(strId -> returnedCategoryIds.add(Integer.parseInt(strId)));
-        return returnedCategoryIds;
-    }
-
-    private Map<String, Integer> getMapIntegerKeyFromStr(String factsStr) {
-        Map<String, Integer> nutritionFactsMap = new HashMap<>();
-        for (String each : factsStr.split(Constants.COMMA)) {
-            nutritionFactsMap.put(each.split(Constants.COLON)[0], Integer.parseInt(each.split(Constants.COLON)[1]));
-        }
-        return nutritionFactsMap;
-    }
-
-    private Map<Integer, Integer> getMapNutritionFactsFromStr(String factsStr) {
-        Map<Integer, Integer> nutritionFactsMap = new HashMap<>();
-        for (String each : factsStr.split(Constants.COMMA)) {
-            nutritionFactsMap.put(Integer.parseInt(each.split(Constants.COLON)[0]), Integer.parseInt(each.split(Constants.COLON)[1]));
-        }
-        return nutritionFactsMap;
     }
 }
