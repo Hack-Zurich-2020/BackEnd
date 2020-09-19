@@ -22,5 +22,6 @@ CREATE TABLE `foods`
 CREATE TABLE `users`
 (
     `id`            varchar(255) NOT NULL,
-    `health_params` varchar(255) DEFAULT NULL
+    `health_params` varchar(255) DEFAULT NULL,
+    `balance`       int          NOT NULL
 );
