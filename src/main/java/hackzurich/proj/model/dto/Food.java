@@ -12,6 +12,8 @@ import java.util.Map;
 @NoArgsConstructor
 @Getter
 public class Food {
+    @JsonProperty("FN")
+    private String foodName;
     @JsonProperty("FI")
     private Long id;
     @JsonProperty("FP")
