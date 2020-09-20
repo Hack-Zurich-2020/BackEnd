@@ -1,0 +1,123 @@
+1;2,4;0:1,1:0,2:1,3:2,4:3,5:3;264;49;6;Chantarelle mushrooms:150,cream:50,Onion:40,Garlic:4,Broth:10,Parsley:5;1;Chantarelle Sour Cream ;20;3
+2;2;0:1,1:0,2:1,3:2,4:1,5:2;700;210;6;Beef:210,onions:35,carrots:35,Garlic:10,Parsely :5,Canola oil:25;0;Roast Beef ;20;3
+3;3,4;0:1,1:0,2:1,3:1,4:3,5:3;240;92;1;Spaghetti:120,canola oil:10,onions:10,tomatoes:100,;0;Pasta ;20;3
+4;2;0:1,1:0,2:1,3:2,4:1,5:2;565;147;2;Fish sticks:200,carrots:50,cabbage:50,red bell pepper:50,brocolli:50,Parsley:50;0;Fish stikcs with vegetables ;20;3
+5;;0:3,1:3,2:4,3:3,4:1,5:3;365;74;6;bread:200,ham:100,canteloupe:50,butter:15,;0;Ham Sandich ;20;3
+6;3,4;0:1,1:0,2:1,3:1,4:3,5:3;370;155;6;bread:200,zucchini:50,aubergine:50,red bell pepper:50,canola oil:10,leek:10;0;Vegi Sandwich ;20;3
+7;;0:3,1:3,2:4,3:3,4:1,5:3;360;42;4;bread:200,chicken:100,soy sauce:15,sambal:15,peanuts:15,sesame oil:15;0;Chicken Satay Sandwich ;20;3
+8;2,3,4;0:1,1:0,2:1,3:2,4:3,5:3;191;74;4;tomatoes:150,broth:10,parsely:10,sugar:6,onion:10,canola oil:5;2;Tomato soup ;20;3
+9;;0:3,1:3,2:4,3:3,4:1,5:3;485;179;7;Pork:210,Potatoes:150,canola oil:10,garlic:5,swiss chard:100,onion:10;0;Sauteed Pork steam ;20;3
+10;1;0:1,1:3,2:3,3:3,4:1,5:2;476;57;7;swiss salmon:210,leek:10,Fennel:30,saffron:4,chinese cabbage:50,pumpkin:50;0;Swiss salmon fillet ;20;3
+11;1,2,4;0:1,1:0,2:1,3:2,4:3,5:3;310;153;1;tomatoes:200,canola oil:10,cannellini beans:50,egg:20,Parsely :10,coriander:10;0;Shakshuka ;20;3
+12;4;0:2,1:2,2:2,3:2,4:2,5:2;335;138;7;potatoes:100,wheat flour :100,butter:10,canola oil:10,milk:50,Parsley:10;0;Potato Gnocchi ;20;3
+13;2,4;0:1,1:0,2:1,3:2,4:3,5:3;270;129;5;leak:100,cream:100,broth:5,onions:10,potatoes:50,parsely:5;2;Leek soup ;20;3
+14;;0:3,1:3,2:4,3:3,4:1,5:3;455;118;1;Veal:210,rosmary:10,potatoes:150,cauliflower:50,butter:10,wheat flour:20;2;Veal ;20;3
+15;4;0:2,1:2,2:2,3:2,4:2,5:2;325;139;3;Halloumi :200,canola oil:5,balsamico:10,olive oil:10,zucchini:50,beetroot:20;0;Fried Halloumi with vegetables ;20;3
+16;2,4;0:1,1:0,2:1,3:2,4:3,5:3;304;56;7;Zucchini:150,yoghurt:50,coriander:10,lemon juice:5,Poppadoms:80,ginger:5;1;Indian Courgette with coriander yoghurt ;20;3
+17;;0:3,1:3,2:4,3:3,4:1,5:3;390;135;1;bread:100,beef sausage :100,fried onions:10,sauerkraut:50,poatatoes:100,vegetable oil:20;0;Hot dog with Sauerkraut ;20;3
+18;4;0:2,1:2,2:2,3:2,4:2,5:2;229;72;7;Penne:120,sour cream:40,tomato puree:10,garlic:4,cherry tomatoes:40,Parmesan cheese:15;0;Penne Cinque Pi ;20;3
+19;1,2,3,4;0:1,1:0,2:1,3:2,4:3,5:3;249;95;6;red lentils:40,tumeric:4,garlic:5,ginger:5,broth:5,coconut milk:140;2;Lentil and coconut soup ;20;3
+20;1;0:1,1:3,2:3,3:3,4:1,5:2;460;70;3;chicken:210,soy sauce:10,hoisin sauce:10,rice wine vinegar:10,honey:10,brown sugar:10;0;Teriyaki chicken Esalop ;20;3
+21;;0:3,1:3,2:4,3:3,4:1,5:3;360;132;6;Fish fillet:210,breadcrumbs:10,egg :5,wheat flour:5,cucumber:60,potatoes:60;0;Breaded perch fillet ;20;3
+22;1,2,3,4;0:1,1:0,2:1,3:2,4:3,5:3;290;144;2;Peppers:150,tofu:60,dates:20,carrots:40,harissa:10,olive oil:10;2;Peppers stuffed with tofu ;20;3
+23;4;0:2,1:2,2:2,3:2,4:2,5:2;200;84;3;iceberg lettuce:100,rucola:10,Tomato:30,cucumber:20,zucchini:20,olive oil:10;2;Seasonal Salad ;20;3
+24;4;0:2,1:2,2:2,3:2,4:2,5:2;180;51;6;watermelon:100,Feta cheese:80,;1;Watermelon with feta ;20;3
+25;4;0:2,1:2,2:2,3:2,4:2,5:2;145;64;4;leek:20,celery :20,pumpkin:20,parsnips:20,broth:5,cream:50;2;Vegetable cream soup ;20;3
+26;;0:3,1:3,2:4,3:3,4:1,5:3;525;134;4;beef:210,bread:100,ketchup:10,sesame seeds:5,mushrooms:80,cheese:20;0;Beef burger in sesame bun ;20;3
+27;1;0:1,1:3,2:3,3:3,4:1,5:2;360;137;2;Rice:100,Prawns:180,Chillies:20,zucchini:20,aubergine:20,carrots:20;0;Fried rice with prawns ;20;3
+28;2,4;0:1,1:0,2:1,3:2,4:3,5:3;130;54;6;carrot:20,onion:10,leek:10,shiitake mushroom:60,soy sauce:10,chili:10;2;Vegetable soup with chili, soy and shiitake muschrooms ;20;3
+29;2;0:1,1:0,2:1,3:2,4:1,5:2;370;56;5;chicken breast:210,cranberry:10,parsnip:50,potato:50,beetroot:50,;0;Cornfed chicken breats ;20;3
+30;1;0:1,1:3,2:3,3:3,4:1,5:2;260;43;7;rice:180,chicken:50,carrot:10,leek:10,soy sauce:10,;0;Nasi ;20;3
+31;4;0:2,1:2,2:2,3:2,4:2,5:2;220;27;7;wheat flour:80,walnuts:10,egg:30,cheese:60,sugar:10,pear:30;0;Nut bread with pears and raclette cheese ;20;3
+32;1,4;0:1,1:2,2:1,3:2,4:2,5:2;270;53;1;bread:200,egg:50,mayonnaise:10,butter:10,;0;Egg Sandwich ;20;3
+33;;0:3,1:3,2:4,3:3,4:1,5:3;290;40;6;bread:200,ham:40,cheese:40,butter:10,;0;Ham and Cheese Sandwich ;20;3
+34;;0:3,1:3,2:4,3:3,4:1,5:3;119;35;4;red lentils:40,cumin:4,garlic:5,ginger:5,broth:5,potato:10;2;Lentil Soup with cumin ;20;3
+35;;0:3,1:3,2:4,3:3,4:1,5:3;399;108;5;pork:210,broccoli:40,rice:120,saffron:4,broth:5,parmesan cheese:10;0;Pork and Saffron risotto ;20;3
+36;;0:3,1:3,2:4,3:3,4:1,5:3;394;113;6;Fish:210,breadcrumbs:10,egg:5,wheat flour:4,lemon:10,parsley:5;0;Deep-fried zurich fish ;20;3
+37;1,4;0:1,1:2,2:1,3:2,4:2,5:2;200;31;5;Orechietti:120,pumpkin squash:60,pumpkin seed oil:10,butter:10,;0;Organic Orechiette with squash ;20;3
+38;;0:3,1:3,2:4,3:3,4:1,5:3;290;100;1;bread:200,pastrami:80,butter:10,;0;Pastrami Sandwich ;20;3
+39;4;0:2,1:2,2:2,3:2,4:2,5:2;300;59;2;bread:200,brie cheese:80,butter:10,rucola:10,;0;Brie Sandwich ;20;3
+40;4;0:2,1:2,2:2,3:2,4:2,5:2;145;51;3;Chicory:100,broth:5,sugar:10,potato:20,canola oil:10,;2;Caramelised chicory soup ;20;3
+41;1;0:1,1:3,2:3,3:3,4:1,5:2;365;163;3;beef:210,rice:80,kale:50,sesame seeds:5,soy sauce:10,canola oil:10;0;Sliced Beef with Rice ;20;3
+42;4;0:2,1:2,2:2,3:2,4:2,5:2;190;65;5;wheat flour:60,egg:30,porcini mushrooms:50,rocket salad:50,;0;Cannelloni stuffed with porcini and rocket ;20;3
+43;1,3,4;0:1,1:0,2:1,3:1,4:3,5:3;390;107;3;Tofu:200,potato:120,artichokes:40,canola oil:10,thyme:5,rosmary:5;0;Tofu escalope ;20;3
+44;4;0:2,1:2,2:2,3:2,4:2,5:2;185;78;2;Kohlrabi:120,cream:50,broth:5,canola oil:10,;2;Kohlrabi cream soup ;20;3
+45;;0:3,1:3,2:4,3:3,4:1,5:3;450;119;4;veal:210,wheat flour:80,semolina:80,egg:30,green beans:50,;0;Roasted Veal ;20;3
+46;;0:3,1:3,2:4,3:3,4:1,5:3;310;110;2;chicken:120,coconut milk:160,soy sauce:10,chili:10,ginger:5,broth:5;2;Thai Coconut Chicken soup ;20;3
+47;2,4;0:1,1:0,2:1,3:2,4:3,5:3;325;66;2;Potato:200,egg:50,Milk:40,truffle:10,butter:10,cream:10;0;Potato pudding with egg ;20;3
+48;;0:3,1:3,2:4,3:3,4:1,5:3;320;73;5;chicken:180,zucchini:50,aubergine:20,carrot:30,canola oil:10,tomato:30;0;Chicken and Vegetable ragout ;20;3
+49;3,4;0:1,1:0,2:1,3:1,4:3,5:3;285;91;4;carrot:100,coconut milk:150,onion:10,canola oil:10,garlic:5,parsley:5;2;Carrot and coconut soup ;20;3
+50;;0:3,1:3,2:4,3:3,4:1,5:3;460;220;3;beef sausage:210,potato:180,brussel sprouts:60,butter:10,;0;Bratwurst with Rosti ;20;3
+51;;0:3,1:3,2:4,3:3,4:1,5:3;450;62;6;Fish fillet:210,tomato:100,aubergine:80,canola oil:10,zucchini:50,;0;Sea Bass Fillet ;20;3
+52;4;0:2,1:2,2:2,3:2,4:2,5:2;230;111;4;aubergine:100,wheat flour:80,parmesan cheese:10,butter:10,egg:30,;2;aubergine Ravioli ;20;3
+53;4;0:2,1:2,2:2,3:2,4:2,5:2;210;85;2;coconut milk:150,broth:5,onion:10,potato:20,curry spice:5,yoghurt:20;2;Curry soup with yoghurt ;20;3
+54;;0:3,1:3,2:4,3:3,4:1,5:3;380;61;6;beef:180,egg:30,wheat flour:50,quark:50,red cabbage:50,chestnuts:20;0;Meat Stew with Spaetzli ;20;3
+55;;0:3,1:3,2:4,3:3,4:1,5:3;310;93;3;rice:180,beef:50,carrot:10,leek:10,soy sauce:10,egg:30;0;Nasi goreng ;20;3
+56;4;0:2,1:2,2:2,3:2,4:2,5:2;135;49;4;parsnip:40,potato:40,tomato sugo:40,broth:5,canola oil:10,;2;Oriental vegetable soup ;20;3
+57;1;0:1,1:3,2:3,3:3,4:1,5:2;384;84;4;chicken:210,rice:100,saffron:4,canola oil:10,parmesan cheese:30,white wine:20;0;Chicken with saffron rice ;20;3
+58;;0:3,1:3,2:4,3:3,4:1,5:3;450;136;4;fish fillet:210,spinach:50,ricotta chese:50,wheat flour:50,egg:30,butter:10;0;Gilt-head bream with vegetables and ravioli ;20;3
+59;1,4;0:1,1:2,2:1,3:2,4:2,5:2;209;24;3;egg:50,vegetable oil:10,red onion:10,garlic:10,ginger:5,carrots:40;0;Kottu Roti ;20;3
+60;4;0:2,1:2,2:2,3:2,4:2,5:2;400;166;5;bread:200,goat cheese:80,pumpkin:80,butter:10,rucola:10,strawberry:20;0;Pumpkin and goat cheese sandwich ;20;3
+61;;0:3,1:3,2:4,3:3,4:1,5:3;360;173;2;beef:140,macaroni:120,apple:50,cream:30,cheese:20,;0;Minced Beef Macaroni ;20;3
+62;2;0:1,1:0,2:1,3:2,4:1,5:2;225;90;1;celery:90,broth:5,pears:40,potato:40,canola oil:10,cream:30;2;Celery soup with pears ;20;3
+63;;0:3,1:3,2:4,3:3,4:1,5:3;485;83;6;veal:210,polenta:130,olives:20,swiss chard:80,rosmary:10,canola oil:10;0;Veal Ragout with polenta ;20;3
+64;2;0:1,1:0,2:1,3:2,4:1,5:2;450;216;6;pork sausage:210,potato:150,leek:60,butter:20,onion:10,;2;Potatoes, leek and sausage ;20;3
+65;4;0:2,1:2,2:2,3:2,4:2,5:2;390;45;2;wheat flour:100,egg:30,milk:80,spinach:100,tomato:80,;0;Lasagne with spinach ;20;3
+66;4;0:2,1:2,2:2,3:2,4:2,5:2;250;85;3;pasta:120,tomato:50,feta:40,olive:20,olive oil:10,zucchini:10;2;Pasta salad ;20;3
+67;3,4;0:1,1:0,2:1,3:1,4:3,5:3;220;59;5;Mushrooms:120,broth:10,carrots:20,parsnips:30,red bell peppers:30,canola oil:10;2;Mushroom broth with vegeatables ;20;3
+68;1;0:1,1:3,2:3,3:3,4:1,5:2;390;117;5;Pork:120,egg:5,breadcrumbs:10,wheat wheat flour:5,potato:150,sugar:10;1;Breaded Pork Escalope ;20;3
+69;1,2;0:1,1:0,2:1,3:1,4:1,5:2;420;95;3;Fish fillet:210,canola oil:20,rice:80,chorizo:50,fennel:50,parsley:10;0;Fried Fillet of Zander ;20;3
+70;3,4;0:1,1:0,2:1,3:1,4:3,5:3;320;76;3;beetroot:180,canola oil:10,miso:10,glass noodles:100,ginger:10,soy sauce:10;2;Crispy Organic Beetroot and Miso ;20;3
+71;2,4;0:1,1:0,2:1,3:2,4:3,5:3;325;75;1;Kohlrabi:200,cream:50,vanilla:5,passion fruit:40,canola oil:10,potato:20;2;Kohlrabi Soup with passion fruit ;20;3
+72;;0:3,1:3,2:4,3:3,4:1,5:3;440;57;4;beef:210,oyster sauce:40,rice:80,broccoli:100,canola oil:10,;0;Beef with oyster sauce ;20;3
+73;;0:3,1:3,2:4,3:3,4:1,5:3;305;67;6;wheat flour:100,egg:50,parmesan:50,pancetta:50,cream:30,butter:10;0;Rigatoni ;20;3
+74;;0:3,1:3,2:4,3:3,4:1,5:3;229;26;2;Rigatoni:120,sour cream:40,tomato puree:10,garlic:4,cherry tomatoes:40,Parmesan cheese:15;0;Rigatoni Cinque Pi ;20;3
+75;4;0:2,1:2,2:2,3:2,4:2,5:2;205;91;7;cauliflower:100,cream:40,canola oil:10,broth:5,pumpkin seeds:40,onion:10;2;Cauliflower cream soup ;20;3
+76;1;0:1,1:3,2:3,3:3,4:1,5:2;480;233;4;Chicken:210,polenta :100,mustard:10,tarragon:10,potato:80,green beans:50;2;Ribelmais Chicken Drumsticks ;20;3
+77;1,4;0:1,1:2,2:1,3:2,4:2,5:2;230;90;1;rigatoni:120,canola oil:10,chili:20,red bell pepper:30,tomato sugo:50,;0;Rigatoni all'arrabbiata ;20;3
+78;1,3,4;0:1,1:0,2:1,3:1,4:3,5:3;355;86;6;chickpeas:120,broth:5,coconut milk:100,pumpkin:40,cauliflower:30,spinach:20;0;Chickpea curry with vegetables ;20;3
+79;;0:3,1:3,2:4,3:3,4:1,5:3;240;116;3;Salmon:120,wheat flour:50,lettuce:50,mayonnaise:10,canola oil:10,;0;Smoked Salmon Wrap ;20;3
+80;4;0:2,1:2,2:2,3:2,4:2,5:2;189;22;1;Apple:100,cheese:50,hazelnuts:20,broth:5,olive oil:10,parsley:4;2;Apple and cheese soup with nuts ;20;3
+81;;0:3,1:3,2:4,3:3,4:1,5:3;504;58;7;Lamb :210,semolina:140,kale:100,canola oil:20,olives:30,thyme:4;0;Leg of Lamb iwth semolina slices ;20;3
+82;;0:3,1:3,2:4,3:3,4:1,5:3;539;189;6;Trout fish:210,leek:80,potato:120,beetroot:80,horseradish:20,broth:5;0;Trout with leek and potato ragout ;20;3
+83;3,4;0:1,1:0,2:1,3:1,4:3,5:3;330;69;3;Tofu:180,miso:10,ginger:10,rice:80,zucchini:40,soy sauce:10;0;Tofu with vegetables ;20;3
+84;4;0:2,1:2,2:2,3:2,4:2,5:2;300;130;4;wheat flour:50,milk:30,feta cheese:70,aubergine:30,zucchini:40,carrots:30;0;Vegetables and Feta wrap ;20;3
+85;4;0:2,1:2,2:2,3:2,4:2,5:2;145;55;3;leek:20,celery :20,pumpkin:20,parsnips:20,broth:5,cream:50;2;Vegetable cream soup ;20;3
+86;;0:3,1:3,2:4,3:3,4:1,5:3;530;64;5;veal:210,potato:140,parsley:20,lemon:10,garlic:10,swiss chard:120;0;Roast Veal with potatoes ;20;3
+87;1;0:1,1:3,2:3,3:3,4:1,5:2;385;66;6;shrimps:100,udon noodles:120,spring onions:30,leak :20,coriander:5,cabbage:40;0;Pan-fried noodles with shrimps ;20;3
+88;4;0:2,1:2,2:2,3:2,4:2,5:2;220;81;6;wheat flour:80,cheese:40,mushrooms:50,rocket salad:30,tomoto sugo:20,;0;Pizza with mushrooms and rocket salad ;20;3
+89;;0:3,1:3,2:4,3:3,4:1,5:3;600;144;3;chicken:210,bread:100,cabbage:80,yoghurt:30,pancetta:20,potato:80;0;Crispy chicken steak ;20;3
+90;;0:3,1:3,2:4,3:3,4:1,5:3;410;96;7;bread:200,tuna fish:150,mayonnaise:40,butter:10,lettuce:10,;0;Tuna Sandwich ;20;3
+91;2,4;0:1,1:0,2:1,3:2,4:3,5:3;189;46;5;banana:100,broth:5,chili:20,cream:50,parsely:4,canola oil:10;2;Banana chili soup ;20;3
+92;;0:3,1:3,2:4,3:3,4:1,5:3;520;158;5;beef:180,tomato paste:60,onions:60,paprika:5,garlic:5,canola oil:10;0;Beef goulash ;20;3
+93;4;0:2,1:2,2:2,3:2,4:2,5:2;340;34;3;pasta:120,cream:40,milk:20,cheese:50,apple sause:80,onions:20;0;Alpine Macaroni ;20;3
+94;1,3,4;0:1,1:0,2:1,3:1,4:3,5:3;335;153;5;kidney beans:60,tomato sugo:60,red bell pepper:60,corn:60,rice:80,canola oil:10;0;Chili con verdure ;20;3
+95;1,3,4;0:1,1:0,2:1,3:1,4:3,5:3;270;60;6;quinoa:160,spring onions:20,leek:20,red bell pepper:20,tomato:20,canola oil:10;2;Quinoa salad ;20;3
+96;1,2,3,4;0:1,1:0,2:1,3:2,4:3,5:3;110;24;1;carrot:20,onion:10,leek:10,mushroom:40,parsnip:10,chili:10;2;Vegetable soup ;20;3
+97;;0:3,1:3,2:4,3:3,4:1,5:3;405;199;4;pork:130,ham:40,sage leaves:10,olive oil:10,broth:5,rice:100;0;Pork with carnaroli risotto ;20;3
+98;;0:3,1:3,2:4,3:3,4:1,5:3;480;150;1;salmon fish:180,carrots:50,fettuccine:100,pine nuts:10,broccoli:80,Parmesan cheese:30;0;Salmon with Fettucine ;20;3
+99;;0:3,1:3,2:4,3:3,4:1,5:3;520;73;6;pork:150,potato:120,red bell pepper:80,carrot:80,parsnip:50,onion:20;0;Vegetable and potato stew with pork ;20;3
+100;4;0:2,1:2,2:2,3:2,4:2,5:2;270;98;5;lettuce:120,almonds:20,mustard:10,tomato:50,cucumber:20,anchovy:50;2;Salad mith anchovy and nuts ;20;3
+101;1,2,3,4;0:1,1:0,2:1,3:2,4:3,5:3;180;54;6;honeydew melon:150,broth:5,lemon:20,parsley:5,;2;Chilled melon soup ;20;3
+102;;0:3,1:3,2:4,3:3,4:1,5:3;445;80;2;pork:130,ham:40,spinach:50,olive oil:10,broth:5,rice:100;0;Pork with spinach risotto ;20;3
+103;4;0:2,1:2,2:2,3:2,4:2,5:2;370;102;7;wheat flour:100,egg:40,mozarella cheese:100,tomatoes:100,butter:10,canola oil:10;0;Ravioli Caprese ;20;3
+104;2,4;0:1,1:0,2:1,3:2,4:3,5:3;575;238;6;Tofu:160,coconut milk:120,curry spice:5,rice:80,carrot:50,aubergine:50;0;Tofu curry with Tomato ;20;3
+105;4;0:2,1:2,2:2,3:2,4:2,5:2;130;21;3;leek:20,celery :20,curry spice:5,zucchini:20,broth:5,cream:50;2;Vegetable cream soup with curry ;20;3
+106;;0:3,1:3,2:4,3:3,4:1,5:3;570;110;5;beef:180,tomato paste:60,onions:60,paprika:5,garlic:5,canola oil:10;0;Beef goulash with yoghurt spätzli and carrots ;20;3
+107;2;0:1,1:0,2:1,3:2,4:1,5:2;500;208;1;Fish:200,potato:80,chickpeas:60,aubergine:60,garlic:10,walnuts:30;0;Pan-fried fish fillet with roasted vegetables ;20;3
+108;4;0:2,1:2,2:2,3:2,4:2,5:2;360;173;1;black beans:100,kidney beans:60,red bell peppers:60,tomato sugo:50,wheat flour:50,cream:20;0;Mexican Bean raout ;20;3
+109;1,3,4;0:1,1:0,2:1,3:1,4:3,5:3;370;58;3;bread:200,chickpeas:80,lemon juice:10,tahini:10,olive oil:10,carrots:30;2;Hummus sandwhich ;20;3
+110;4;0:2,1:2,2:2,3:2,4:2,5:2;308;111;3;wheat flour:100,potato:100,saffron:3,parsley:5,spring onions:20,canola oil:10;2;Potato Gnocchi with vegetables ;20;3
+111;2,4;0:1,1:0,2:1,3:2,4:3,5:3;205;42;6;peas:100,broth:5,onions:20,parsnip:20,canola oil:10,milk:50;2;Pea soup ;20;3
+112;1,2;0:1,1:0,2:1,3:1,4:1,5:2;490;161;5;Lamb :210,potato:180,palm oil:20,green beans:80,;0;Roasted Lamb with baked potatoes ;20;3
+113;1,2,4;0:1,1:0,2:1,3:2,4:3,5:3;220;30;3;rice:120,egg:30,onion:20,chili:10,carrots:20,soybean:20;0;Fried Rice with vegetables ;20;3
+114;2,4;0:1,1:0,2:1,3:2,4:3,5:3;350;132;2;cauliflower:180,potato:20,cucumber:50,poppadoms:50,tomato:50,;2;Tandori cauliflower ;20;3
+115;1,2,3,4;0:1,1:0,2:1,3:2,4:3,5:3;260;69;4;lentils:60,lettuce:100,papaya:50,oats:10,peanuts:10,peach:10;2;Salad with papaya and peach ;20;3
+116;;0:3,1:3,2:4,3:3,4:1,5:3;185;27;6;celery:120,broth:5,milk:20,cashew nuts:20,onions:10,canola oil:10;2;Celery cream soup with cashew nuts ;20;3
+117;;0:3,1:3,2:4,3:3,4:1,5:3;460;154;4;chicken:180,spaghetti:100,cream:50,egg:10,breadcrumbs:10,brocolli:100;0;Chicken piccata with spaghetti ;20;3
+118;3,4;0:1,1:0,2:1,3:1,4:3,5:3;430;93;7;black beans:50,mushrooms:20,peas:50,wheat flour:150,potato:120,canola oil:20;0;Vegan burger ;20;3
+119;4;0:2,1:2,2:2,3:2,4:2,5:2;305;118;7;wheat flour:100,cream:50,spinach:50,oats:30,ricotta chease:50,butter:20;0;Spinach and ricotta tortellini ;20;3
+120;;0:3,1:3,2:4,3:3,4:1,5:3;340;156;4;quinoa:120,chili:20,castor beans:20,palm oil:10,wheat flour:100,tomato:50;0;Quinoa chili burger ;20;3
+121;1,2,3,4;0:1,1:0,2:1,3:2,4:3,5:3;110;18;3;onion:60,potato:20,canola oil:10,oats:20,;2;Onion soup ;20;3
+122;;0:3,1:3,2:4,3:3,4:1,5:3;500;61;3;veal:180,wheat flour:100,chantarelle mushrooms:100,zucchini:80,olive oil:20,egg:20;0;Veal with chantarelles and fetuccine ;20;3
+123;;0:3,1:3,2:4,3:3,4:1,5:3;340;118;6;sea bass fish:190,rice:80,ginger:10,coconut milk:50,canola oil:10,;0;Fillet of Sea-bass with rice;20;3
