@@ -22,7 +22,7 @@ public class UserService {
 
     public void createUser(CreateUserRequest request){
         UserEntity userEntity = new UserEntity(request.getId(), CodingUtil.intMapToStr(request.getHealthParams()),
-                request.getInitialBalance(), request.getConsumptionCoefficient());
+                request.getInitialBalance());
         if (userRepository.findByUserName(request.getId()).isPresent())
             throw new UserExistingException();
         userRepository.save(userEntity);
@@ -33,8 +33,7 @@ public class UserService {
         if (userEntityOptional.isEmpty())
             throw new UserNotFoundException();
         UserEntity userEntity = userEntityOptional.get();
-        return new GetHealthParamsResponse(userName, CodingUtil.strToIntKeyMap(userEntity.getHealthParams()),
-                userEntity.getConsumptionLevel());
+        return new GetHealthParamsResponse(userName, CodingUtil.strToIntKeyMap(userEntity.getHealthParams()));
     }
 
     public GetHealthParamsResponse updateUserHealthParams(UpdateUserHealthParamsRequest request){
@@ -43,9 +42,8 @@ public class UserService {
             throw new UserNotFoundException();
         UserEntity userEntity = userEntityOptional.get();
         userEntity.setHealthParams(CodingUtil.intMapToStr(request.getHealthParams()));
-        userEntity.setConsumptionLevel(request.getConsumptionCoefficient());
         userRepository.save(userEntity);
-        return new GetHealthParamsResponse(request.getId(), request.getHealthParams(), request.getConsumptionCoefficient());
+        return new GetHealthParamsResponse(request.getId(), request.getHealthParams());
     }
 
 }

@@ -25,6 +25,6 @@ public class UserController {
 
     @PostMapping("/user/update_health_params")
     public GetHealthParamsResponse updateHealthParams(@RequestBody UpdateUserHealthParamsRequest request){
-        return userService.updateUserHealthParams(request.getId(), request.getHealthParams());
+        return userService.updateUserHealthParams(request);
     }
 }

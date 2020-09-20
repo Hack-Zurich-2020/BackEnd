@@ -15,6 +15,4 @@ public class UpdateUserHealthParamsRequest {
     private String id;
     @JsonProperty("HP")
     private Map<Integer, Integer> healthParams;
-    @JsonProperty("CC")
-    private int consumptionCoefficient;
 }
