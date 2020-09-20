@@ -22,27 +22,27 @@ public class UserService {
     public void createUser(CreateUserRequest request){
         UserEntity userEntity = new UserEntity(request.getId(), CodingUtil.intMapToStr(request.getHealthParams()),
                 request.getInitialBalance());
-        if (userRepository.findById(request.getId()).isPresent())
+        if (userRepository.findByUserName(request.getId()).isPresent())
             throw new UserExistingException();
         userRepository.save(userEntity);
     }
 
-    public GetHealthParamsResponse getUserHealthParams(String userId){
-        Optional<UserEntity> userEntityOptional = userRepository.findById(userId);
+    public GetHealthParamsResponse getUserHealthParams(String userName){
+        Optional<UserEntity> userEntityOptional = userRepository.findById(userName);
         if (userEntityOptional.isEmpty())
             throw new UserNotFoundException();
         UserEntity userEntity = userEntityOptional.get();
-        return new GetHealthParamsResponse(userId, CodingUtil.strToIntKeyMap(userEntity.getHealthParams()));
+        return new GetHealthParamsResponse(userName, CodingUtil.strToIntKeyMap(userEntity.getHealthParams()));
     }
 
-    public GetHealthParamsResponse updateUserHealthParams(String userId, Map<Integer, Integer> healthParams){
-        Optional<UserEntity> userEntityOptional = userRepository.findById(userId);
+    public GetHealthParamsResponse updateUserHealthParams(String userName, Map<Integer, Integer> healthParams){
+        Optional<UserEntity> userEntityOptional = userRepository.findByUserName(userName);
         if (userEntityOptional.isEmpty())
             throw new UserNotFoundException();
         UserEntity userEntity = userEntityOptional.get();
         userEntity.setHealthParams(CodingUtil.intMapToStr(healthParams));
         userRepository.save(userEntity);
-        return new GetHealthParamsResponse(userId, healthParams);
+        return new GetHealthParamsResponse(userName, healthParams);
     }
 
 }

@@ -32,4 +32,6 @@ public class Food {
     //FoodType
     @JsonProperty("FT")
     private Integer foodType;
+    @JsonProperty("FS")
+    private Double foodScore;
 }

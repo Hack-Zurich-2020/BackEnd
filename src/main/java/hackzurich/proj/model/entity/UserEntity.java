@@ -11,9 +11,12 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class UserEntity {
-    @NonNull
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @NonNull
+    private String userName;
 
     @NonNull
     private String healthParams;

@@ -15,4 +15,6 @@ public class Restaurant {
     private Double distance;
     @JsonProperty("RC")
     private List<Integer> restaurantCategories;
+    @JsonProperty("RS")
+    private Double restaurantScore;
 }

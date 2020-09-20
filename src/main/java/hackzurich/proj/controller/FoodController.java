@@ -1,5 +1,6 @@
 package hackzurich.proj.controller;
 
+import hackzurich.proj.model.dto.request.FoodFeedbackRequest;
 import hackzurich.proj.model.dto.request.FoodInquiryRequest;
 import hackzurich.proj.model.dto.request.FoodOrderRequest;
 import hackzurich.proj.model.dto.response.FoodInquiryResponse;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @PropertySource("classpath:application.properties")
 @AllArgsConstructor
 @Slf4j
+@CrossOrigin
 public class FoodController {
     private FoodService foodService;
 
@@ -32,5 +34,10 @@ public class FoodController {
     @GetMapping("/food/finalize")
     public void finalizeOrder(@RequestParam(name = "orderId") String orderId){
         foodService.finalizeOrder(orderId);
+    }
+
+    @PostMapping("/food/feedback")
+    public void feedback(@RequestBody FoodFeedbackRequest request){
+        foodService.receiveFeedback(request);
     }
 }

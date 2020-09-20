@@ -1,5 +1,6 @@
 package hackzurich.proj.model.entity;
 
+import lombok.Data;
 import lombok.Getter;
 
 import javax.persistence.*;
@@ -7,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "restaurants")
-@Getter
+@Data
 public class RestaurantEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +22,6 @@ public class RestaurantEntity {
     private String name;
     private double longitude;
     private double latitude;
+    private double score;
+    private int ordersCount;
 }

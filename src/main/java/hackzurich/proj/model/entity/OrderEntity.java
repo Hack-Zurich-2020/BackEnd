@@ -21,6 +21,6 @@ public class OrderEntity {
     private boolean isFinalized;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private UserEntity userEntity;
 }
