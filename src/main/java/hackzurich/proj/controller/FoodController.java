@@ -1,5 +1,6 @@
 package hackzurich.proj.controller;
 
+import hackzurich.proj.model.dto.request.FoodFeedbackRequest;
 import hackzurich.proj.model.dto.request.FoodInquiryRequest;
 import hackzurich.proj.model.dto.request.FoodOrderRequest;
 import hackzurich.proj.model.dto.response.FoodInquiryResponse;
@@ -31,7 +32,12 @@ public class FoodController {
     }
 
     @GetMapping("/food/finalize")
-    public void finalizeOrder(@RequestParam(name = "orderId") String orderId){
-        foodService.finalizeOrder(orderId);
+    public void finalizeOrder(@RequestParam(name = "orderId") String orderId, @RequestParam(name = "orderId") String userId){
+        foodService.finalizeOrder(orderId, userId);
+    }
+
+    @PostMapping("/food/feedback")
+    public void receiveFeedback(@RequestBody FoodFeedbackRequest request){
+        foodService.receiveFeedback(request);
     }
 }

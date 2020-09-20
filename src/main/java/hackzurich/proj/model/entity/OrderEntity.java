@@ -19,6 +19,7 @@ public class OrderEntity {
     private int wasteCause;
     private String foodsMap;
     private boolean isFinalized;
+    private int price;
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")

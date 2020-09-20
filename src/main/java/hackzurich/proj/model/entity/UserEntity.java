@@ -22,6 +22,8 @@ public class UserEntity {
     private String healthParams;
     @NonNull
     private int balance;
+    @NonNull
+    private int consumptionLevel;
 
     @OneToMany(targetEntity = OrderEntity.class, mappedBy = "userEntity", fetch = FetchType.LAZY)
     private List<OrderEntity> orderEntities;

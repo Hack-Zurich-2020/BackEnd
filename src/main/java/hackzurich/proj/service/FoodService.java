@@ -27,6 +27,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 @AllArgsConstructor
@@ -77,27 +78,35 @@ public class FoodService {
             throw new UserNotFoundException();
         UserEntity userEntity = userEntityOptional.get();
         Map<String, Integer> orderMap = new HashMap<>();
+        AtomicInteger price = new AtomicInteger(0);
         request.getFoodIds().forEach(foodId -> {
             Optional<FoodEntity> foodEntityOptional = foodRepository.findById(foodId);
             if (foodEntityOptional.isEmpty())
                 throw new FoodNotFoundException();
             FoodEntity foodEntity = foodEntityOptional.get();
+            price.addAndGet(foodEntity.getPrice());
             orderMap.put(foodEntity.getName(), foodEntity.getAmount());
         });
         String orderId = GenIdUtil.genId(Constants.ORDER_ID_LEN);
         OrderEntity orderEntity = new OrderEntity(orderId, Constants.NO_VALUE, Constants.NO_VALUE,
-                CodingUtil.strMapToStr(orderMap), false, userEntity);
+                CodingUtil.strMapToStr(orderMap), false, price.get(), userEntity);
         orderRepository.save(orderEntity);
         return new FoodOrderResponse(mainConfig.getEstimatedTime(), orderId, orderMap);
     }
 
-    public void finalizeOrder(String orderId) {
+    public void finalizeOrder(String orderId, String userId) {
         Optional<OrderEntity> orderEntityOptional = orderRepository.findById(orderId);
         if (orderEntityOptional.isEmpty())
             throw new OrderNotFoundException();
         OrderEntity orderEntity = orderEntityOptional.get();
         orderEntity.setFinalized(true);
         orderRepository.save(orderEntity);
+        Optional<UserEntity> userEntityOptional = userRepository.findByUserName(userId);
+        if (userEntityOptional.isEmpty())
+            throw new UserNotFoundException();
+        UserEntity userEntity = userEntityOptional.get();
+        userEntity.setBalance(userEntity.getBalance() - orderEntity.getPrice());
+        userRepository.save(userEntity);
     }
 
     public void receiveFeedback(FoodFeedbackRequest request) {

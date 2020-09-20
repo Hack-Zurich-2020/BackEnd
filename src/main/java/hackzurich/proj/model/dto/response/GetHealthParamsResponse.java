@@ -15,4 +15,6 @@ public class GetHealthParamsResponse {
     private String userId;
     @JsonProperty("HP")
     private Map<Integer, Integer> healthParams;
+    @JsonProperty("CC")
+    private Integer consumptionCoefficient;
 }
