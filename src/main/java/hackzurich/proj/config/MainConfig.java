@@ -12,4 +12,6 @@ public class MainConfig {
     private int maxDistanceKm;
     @Value("${estimated-time}")
     private int estimatedTime;
+    @Value("${python-diet-path}")
+    private String pythonDietPath;
 }
